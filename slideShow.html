@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container{
+            width: 320px;
+            height: 320px;
+            border: thin orange solid;
+            margin: 0 auto;
+        }
+        #counter{
+            position: relative;
+            display: inline-block;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 25px;
+            font-weight: bolder;
+            color:black;
+            background-color: rgba(255, 0, 0, 0.7);
+        }
+    
+    </style>
+
+</head>
+<body>
+    
+
+
+
+
+
+
+<div id="container">
+    <img src="img/001.jpg" alt="" >
+
+<div id="counter">counter</div>
+</div>
+
+<script>
+    var photos = ["001.jpg", "002.jpg", "003.jpg", "004.jpg", "005.jpg", "006.jpg"];
+    var currentPhoto = 1;
+  
+    var slidePhotoTimer = setInterval(() => {
+        if(currentPhoto < photos.length){
+            document.querySelector("#container img").setAttribute("src", "img/" +photos[currentPhoto++]); 
+           
+        }
+    else{
+        currentPhoto = 0;
+        document.querySelector("#container img").setAttribute("src", "img/" +photos[currentPhoto++]); 
+        
+    }
+    }, 2000);
+
+</script>
+
+</body>
+</html>

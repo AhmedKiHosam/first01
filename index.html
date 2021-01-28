@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <div id="txt">
+
+
+    </div>
+<script>
+    var x = setInterval(fn02, 1000);
+    var counter = 0;
+    function fn02(){
+        document.getElementById("txt").innerHTML = "new text here !!!! " + (counter++);
+        if(counter >= 5){
+            clearInterval(x);
+        }
+    }
+
+
+
+
+
+
+    /* setTimeout(fn01, 3000);
+    var counter = 0;
+    function fn01(){
+        document.getElementById("txt").innerHTML = "new text here !!!!" + (counter++);
+        if(counter <= 5){
+        setTimeout(fn01, 1000);
+    }
+} */
+
+</script>
+
+
+</body>
+</html>
